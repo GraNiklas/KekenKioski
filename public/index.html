@@ -69,7 +69,7 @@ async function henkilokunta()
         x += `<table class="table"><thead><th>Nimi</th><th>puhelin</th></thead><tbody>`
             try{
                 
-                const response = await fetch("http://localhost:3000/api/henkilo")
+                const response = await fetch("https://kekenkioski.onrender.com/ap/henkilo")
                 const henkilökuntadata = await response.json()
                 await henkilökuntadata.map(h=>{
                     x += `<tr><td>${h.Nimi}</td><td>${h.Puhelin}</td></tr>`
@@ -89,7 +89,7 @@ async function yritys()
         var x = `<h3>Tietoja yrityksestä</h3>`
             try{
                 
-                const response = await fetch("http://localhost:3000/api/yritys")
+                const response = await fetch("https://kekenkioski.onrender.com/api/yritys")
                 const henkilökuntadata = await response.json()
                 await henkilökuntadata.map(h=>{
                     x += `<p class="esittely">${h.esittelyTeksti}</p>`
@@ -109,7 +109,7 @@ async function yhteystiedot()
         var x = `<h3>Yhteystiedot</h3>`
             try{
                 
-                const response = await fetch("http://localhost:3000/api/yhteystiedot")
+                const response = await fetch("https://kekenkioski.onrender.com/api/yhteystiedot")
                 const henkilökuntadata = await response.json()
                 await henkilökuntadata.map(h=>{
                     x += `<p>Osoite: ${h.Osoite}</p><p>Puh. ${h.Puhelin}</p><p>Toimitusjohtaja: ${h.Toimitusjohtaja}</p>`
