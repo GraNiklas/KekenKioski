@@ -1,16 +1,23 @@
 // Express.js palvelin
 const path = require('path')
 const express = require('express')
+const cors = require('cors');
 
-const PORT = process.env.PORT || 3000;
-const fs = require('fs').promises
-
-const app = express();
-
-const henkilokunta = require('./henkilokunta.json')
-const yritysEsittely = require('./yritysEsittely.json')
-const yhteystiedot = require('./yhteystiedot.json')
-
+const corsOptions = {
+    origin: 'https://keken-kioski.onrender.com', // Allow requests from this origin
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'], // Allow these headers
+  };
+  const PORT = process.env.PORT || 3000;
+  const fs = require('fs').promises
+  
+  const app = express();
+  
+  const henkilokunta = require('./henkilokunta.json')
+  const yritysEsittely = require('./yritysEsittely.json')
+  const yhteystiedot = require('./yhteystiedot.json')
+  
+app.use(cors(corsOptions));
 
 app.get('/api/henkilo',(req, res) => {
     res.json(henkilokunta);
