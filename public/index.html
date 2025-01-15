@@ -69,7 +69,7 @@ async function henkilokunta()
         x += `<table class="table"><thead><th>Nimi</th><th>puhelin</th></thead><tbody>`
             try{
                 
-                const response = await fetch("https://kekenkioski.onrender.com/ap/henkilo")
+                const response = await fetch("https://kekenkioski.onrender.com/api/henkilo")
                 const henkilökuntadata = await response.json()
                 await henkilökuntadata.map(h=>{
                     x += `<tr><td>${h.Nimi}</td><td>${h.Puhelin}</td></tr>`
