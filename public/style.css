@@ -1,0 +1,30 @@
+h1{
+    color: gold;
+    font-size: 72px;
+    font-variant-caps: all-petite-caps;
+}
+p{
+    color: black;
+}
+.Title{
+    background-color: darkred;
+}
+#Nav{
+    background-color: gold;padding: 10px;
+}
+.btn{
+    font-weight: bold;
+}
+body{
+    background-color: cornsilk;
+}
+#sisältö{
+    padding: 5%;
+    /* background-color: rgb(192, 182, 169); */
+    width: 50%;
+}
+.table{
+    width: 30%;
+}
+/* .esittely{
+} */
