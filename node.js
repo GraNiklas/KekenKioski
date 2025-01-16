@@ -24,19 +24,19 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 // Handle JSON responses
-app.get('/api/henkilo', (req, res) => {
+app.get('https://kekenkioski.onrender.com/api/henkilo', (req, res) => {
     res.json(henkilokunta);
 });
 
-app.get('/api/yritys', (req, res) => {
+app.get('https://kekenkioski.onrender.com/api/yritys', (req, res) => {
     res.json(yritysEsittely);
 });
 
-app.get('/api/yhteystiedot', (req, res) => {
+app.get('https://kekenkioski.onrender.com/api/yhteystiedot', (req, res) => {
     res.json(yhteystiedot);
 });
 
-app.get('/api/getpin', async (req, res) => {
+app.get('https://kekenkioski.onrender.com/api/getpin', async (req, res) => {
     try {
         const savedPin = await fs.readFile('./pin.txt', 'utf-8');
         res.send(savedPin);
